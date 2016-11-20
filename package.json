@@ -4,8 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "budo . -d --serve bundle.js --live",
+    "build": "browserify . -o bundle.js -g uglifyify",
+    "test": "browserify test/index.js | node | tap-spec"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "budo": "^9.2.2",
+    "clone": "^2.0.0",
+    "deep-freeze": "0.0.1",
+    "morphdom": "^2.2.0",
+    "redux": "^3.6.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2",
+    "yo-yo": "^1.3.1"
+  }
 }
