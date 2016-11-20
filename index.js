@@ -1,6 +1,8 @@
 const redux = require('redux')
 const morphdom = require('morphdom')
 const yo = require('yo-yo')
+const reducer = require('./reducer')
+const displayFacts = require('./templates/facts');
 
 var main = document.querySelector('main')
 var app = document.createElement('div')
@@ -24,3 +26,11 @@ store.subscribe(() => {
   var view = render(state, store.dispatch)
   morphdom(app, view)
 })
+
+store.dispatch({type: 'INIT'})
+
+function render (state, dispatch) {
+  return yo`
+            <div class='app'>${displayFacts(state.josephfacts, store.dispatch)}</div>
+           `
+}
