@@ -8,7 +8,7 @@ function displayFacts (facts, dispatch) {
     <div id='facts'>
       Facts:
       ${
-        facts.map((fact) => Fact(fact.dispatch))
+        facts.map((fact) => Fact(fact, dispatch))
       }
     </div>
   `
