@@ -7,6 +7,9 @@ function reducer (state, action) {
   switch (action.type) {
     case 'INIT':
       return newState
+    case 'RECEIVE_BEERS':
+      newState.beers = action.payload
+      return newState
   }
   return newState
 }

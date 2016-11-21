@@ -2,7 +2,7 @@ const yo = require('yo-yo')
 
 module.exports = createSingleBeer
 
-function createSingleBeer (beerlist, dispatch) {
+function createSingleBeer (singlebeer, dispatch) {
   const {name, brewery, country, style, abv} = singlebeer
 
   return yo`
