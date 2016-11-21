@@ -13,10 +13,10 @@ let initialState = {
 }
 
 const store = redux.createStore(reducer, initialState)
-const state = store.getState()
+let state = store.getState()
 
 store.subscribe(() => {
-  let state = store.getState()
+  state = store.getState()
   var view = render(state, store.dispatch)
   yo.update(app, view)
 })
