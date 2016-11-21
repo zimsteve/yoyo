@@ -1,5 +1,4 @@
 const redux = require('redux')
-const morphdom = require('morphdom')
 const yo = require('yo-yo')
 const reducer = require('./reducer')
 const displayFacts = require('./templates/facts');
@@ -24,7 +23,7 @@ const store = redux.createStore(reducer, initialState)
 store.subscribe(() => {
   var state = store.getState()
   var view = render(state, store.dispatch)
-  morphdom(app, view)
+  yo.update(app, view)
 })
 
 store.dispatch({type: 'INIT'})
