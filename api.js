@@ -1,6 +1,6 @@
 const request = require('superagent')
 
-function callAPI(dispatch) {
+function callAPI (dispatch) {
   dispatch({type: 'TOGGLE_LOADING'})
   request
   .get('https://rogue-beers.herokuapp.com/api/v1/beers')

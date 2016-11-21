@@ -2,8 +2,6 @@ const redux = require('redux')
 const yo = require('yo-yo')
 const reducer = require('./reducer')
 const displayBeers = require('./templates/beerlist')
-const request = require('superagent')
-
 
 let main = document.querySelector('main')
 let app = document.createElement('div')

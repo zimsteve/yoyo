@@ -3,12 +3,12 @@ var freeze = require('deep-freeze')
 
 var reducer = require('../reducer')
 
-test("base test", (t) => {
+test('base test', (t) => {
   t.ok(true)
   t.end()
 })
 
-test("Test that reducer can display the facts", (t) => {
+test('Test that reducer can display the facts', (t) => {
   // arrange
   const state = {
     conspiracies: [
