@@ -27,6 +27,6 @@ store.dispatch({type: 'INIT'})
 
 function render (state, dispatch) {
   return yo`
-            <div class='app'>${displayBeers(state.beers, store.dispatch)}</div>
+            <div class='app'>${displayBeers(state, store.dispatch)}</div>
            `
 }

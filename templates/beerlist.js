@@ -4,12 +4,17 @@ const callAPI = require('../api')
 
 module.exports = displayBeers
 
-function displayBeers (beerlist, dispatch) {
+
+function displayBeers (state, dispatch) {
+  var beerlist = state.beers
+  var isLoading = state.isLoading
+  console.log(isLoading)
   return yo`
     <div id='beerlist'>
     <button class='refresh' onclick=${() => callAPI(dispatch)}>Refresh</button>
     <br />
-      Beers:
+    <br />
+      ${(isLoading) ? "Loading ..." : ""}
       ${
         beerlist.map((beer) => createSingleBeer(beer, dispatch))
       }
