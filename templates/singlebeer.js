@@ -1,4 +1,5 @@
 const yo = require('yo-yo')
+const getStyles = require('../api').getStyles
 
 module.exports = createSingleBeer
 
@@ -10,8 +11,10 @@ function createSingleBeer (singlebeer, dispatch) {
       <h2>${name}</h2>
       <p>Brewery: ${brewery}</p>
       <p>Country: ${country}</p>
-      <p>Style: ${style}</p>
+      <p class='style' onclick=${() => getStyles(dispatch, style)}>Style: ${style}</p>
       <p>ABV: ${abv}</p>
     </div>
   `
 }
+
+//     <button class='refresh' onclick=${() => getBeers(dispatch)}>Refresh</button>

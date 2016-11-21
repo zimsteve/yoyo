@@ -8,3 +8,8 @@ body {
 h1, h2 {
   color: #ff9100;
 }
+
+.style {
+  text-decoration: underline;
+  color: #ffc58c;
+}
