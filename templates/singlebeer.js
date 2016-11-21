@@ -7,7 +7,7 @@ function createSingleBeer (singlebeer, dispatch) {
 
   return yo`
     <div class='singlebeer'>
-      <p><strong>${name}</strong></p>
+      <h2>${name}</h2>
       <p>Brewery: ${brewery}</p>
       <p>Country: ${country}</p>
       <p>Style: ${style}</p>

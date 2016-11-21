@@ -1,0 +1,10 @@
+body {
+  font-family: 'Dosis', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #ff9100;
+}
